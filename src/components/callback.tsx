@@ -19,7 +19,8 @@ export default function Callback() {
   let token_request_data = {
     grant_type: "authorization_code",
     client_id: "43f549702447220f4fcc36be44a61bc6",
-    redirect_uri: "http://localhost:3000/callback",
+    // redirect_uri: "http://localhost:3000/callback", // develop
+    redirect_uri: "https://main.d1k90doxksawje.amplifyapp.com/callback", // production
     code: new URL(window.location.href).searchParams.get("code"),
   };
 

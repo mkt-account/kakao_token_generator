@@ -4,7 +4,8 @@ export default function Init() {
   const codeParams = {
     init_url: "https://kauth.kakao.com/oauth/authorize?client_id=",
     client_id: "43f549702447220f4fcc36be44a61bc6",
-    redirect_uri: "http://localhost:3000/callback",
+    // redirect_uri: "http://localhost:3000/callback", // develop
+    redirect_uri: "https://main.d1k90doxksawje.amplifyapp.com/callback", // production
   };
 
   return (
