@@ -22,7 +22,7 @@ export default function Init() {
                 </p>
                 <p>
                   <a
-                    href="http://10.0.0.18:8080/view/marketing/job/%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%AA%A8%EB%A8%BC%ED%8A%B8%20API/"
+                    href="http://10.0.0.18:8080/view/Marketing%20Report%20Raw/job/%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%AA%A8%EB%A8%BC%ED%8A%B8%20MA/"
                     target="_blank"
                     rel="noreferrer"
                     className="underline font-bold"
