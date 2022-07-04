@@ -82,9 +82,32 @@ export default function Callback() {
             )}
           </div>
           {refreshTokenExpire && (
-            <div className="m-8 font-bold">
-              만료 일시 : {calcExpireDate(refreshTokenExpire)}
-            </div>
+            <>
+              <div className="m-8 font-bold">
+                만료 일시 : {calcExpireDate(refreshTokenExpire)}
+              </div>
+              <div>
+                <label>
+                  <p>
+                    새로운 리프레시 토큰을 발급받으면 기존 토큰은 만료됩니다.
+                  </p>
+                  <p>
+                    발급 후 반드시 젠킨스에서 해당 작업의 매개변수를
+                    변경해주세요.
+                  </p>
+                  <p>
+                    <a
+                      href="http://10.0.0.18:8080/view/Marketing%20Report%20Raw/job/%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%AA%A8%EB%A8%BC%ED%8A%B8%20MA/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="underline font-bold"
+                    >
+                      젠킨스 링크
+                    </a>
+                  </p>
+                </label>
+              </div>
+            </>
           )}
         </div>
       </div>

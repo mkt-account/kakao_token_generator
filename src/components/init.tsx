@@ -8,6 +8,20 @@ export default function Init() {
     redirect_uri: "https://main.d1k90doxksawje.amplifyapp.com/callback", // production
   };
 
+  function alertConfirm() {
+    if (
+      // eslint-disable-next-line no-restricted-globals
+      confirm(
+        "정말 새로 발급하시겠습니까? 기존 토큰이 무효화되어 배치 작업에 이상이 생길 수 있습니다."
+      )
+    ) {
+      console.log("Okay");
+      window.location.href = `${codeParams.init_url}${codeParams.client_id}&redirect_uri=${codeParams.redirect_uri}&response_type=code`;
+    } else {
+      console.log("No");
+    }
+  }
+
   return (
     <>
       <Header />
@@ -48,13 +62,16 @@ export default function Init() {
                 </p>
               </label>
             </div>
-            <a
+            {/* <a
               href={`${codeParams.init_url}${codeParams.client_id}&redirect_uri=${codeParams.redirect_uri}&response_type=code`}
+            > */}
+            <button
+              className="mt-8 px-9 py-3 border-2 rounded-lg bg-black text-white hover:bg-gray-200 hover:text-black"
+              onClick={() => alertConfirm()}
             >
-              <button className="mt-8 px-9 py-3 border-2 rounded-lg bg-black text-white hover:bg-gray-200 hover:text-black">
-                새로운 리프레시 토큰 받기
-              </button>
-            </a>
+              새로운 리프레시 토큰 받기
+            </button>
+            {/* </a> */}
           </div>
         </div>
       </div>
